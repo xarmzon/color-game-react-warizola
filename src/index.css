@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: rgb(34, 33, 33);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: hsl(214, 85%, 45%);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.25rem;
+}
+
+header h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+header select {
+  background: white;
+  border: 1px solid transparent;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem 1rem;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+section.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+section button,
+.restart {
+  height: 70px;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: transform 0.3s linear;
+  border: none;
+}
+
+section button:hover {
+  transform: scale(1.1) skew(2deg);
+}
+
+section button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.confetti {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.restart {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  min-width: 180px;
+}
+
+.restart:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
