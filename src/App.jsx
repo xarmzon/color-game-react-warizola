@@ -32,7 +32,7 @@ function App() {
 
       {gameState !== "pending" && (
         <button onClick={restartGame} className="restart">
-          Restart
+          Restart Game
         </button>
       )}
     </>
